@@ -51,11 +51,52 @@ Model Waveform
 <img width="704" height="178" alt="image" src="https://github.com/user-attachments/assets/32ee29b3-0d95-4192-9762-972d50c05c90" />
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
-Program
+Program:
+ac=15.4; 
+Am=11.4; 
+fc=2570;
+fm=320;
+fs=25000; 
+t=0:1/fs:2/fm; 
+wc=2*3.14*fc;
+wm=2*3.14*fm;
+e1=(Am*sin(wm*t));
+subplot(4,1,1);
+plot(t,e1); 
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Message Signal m(t)");
+e2=(ac*sin(wc*t)); 
+subplot(4,1,2); 
+plot(t,e2);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Carrier Signal c(t)");
+sbsc1=(Am/2.*cos(wc*t-wm*t))-(Am/2.*cos(wc*t+wm*t));
+sbsc2=(Am/2.*cos(wc*t-wm*t))+(Am/2.*cos(wc*t+wm*t)); 
+e3=(sbsc2)+(sbsc1); 
+subplot(4,1,3);
+plot(t,e3);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("SSB-SC Modulated Signal (LSB)");
+e4=(sbsc2)-(sbsc1); 
+subplot(4,1,4); 
+plot(t,e4);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("SSB-SC Modulated Signal (USB)");
+xgrid;
 
-OUTPUT WAVEFORM
 
-TABULATION
+OUTPUT WAVEFORM:
+<img width="1919" height="1120" alt="Screenshot 2025-10-28 204632" src="https://github.com/user-attachments/assets/d2677a63-dca6-4910-a21f-1eea92bcd937" />
+
+
+TABULATION:
+![WhatsApp Image 2025-10-28 at 22 15 10_33c57729](https://github.com/user-attachments/assets/cd33f287-0647-44d7-8dcc-f4d99fd9c627)
+
+![WhatsApp Image 2025-10-28 at 22 15 10_417ec155](https://github.com/user-attachments/assets/67a26fd3-02e0-4a4a-a825-0c5b263cb2c3)
 
 
 
