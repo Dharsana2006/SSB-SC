@@ -52,6 +52,7 @@ Model Waveform
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
 Program:
+```
 ac=15.4; 
 Am=11.4; 
 fc=2570;
@@ -87,6 +88,7 @@ xlabel("Time(s)");
 ylabel("Amplitude");
 title("SSB-SC Modulated Signal (USB)");
 xgrid;
+```
 
 
 OUTPUT WAVEFORM:
